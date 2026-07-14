@@ -777,7 +777,7 @@ void createUi(HWND window)
         DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
         CLEARTYPE_QUALITY, DEFAULT_PITCH, L"Microsoft YaHei UI");
 
-    HWND title = createControl(0, L"STATIC", L"隐私媒体批处理", SS_LEFT, 24, 16, 420, 34, 0);
+    HWND title = createControl(0, L"STATIC", L"VideoPrivacy", SS_LEFT, 24, 16, 420, 34, 0);
     setFont(title, state.titleFont);
     createControl(
         0, L"STATIC",
@@ -1201,7 +1201,7 @@ LRESULT CALLBACK windowProcedure(HWND window, UINT message, WPARAM wParam, LPARA
         MessageBoxW(
             window,
             summary.c_str(),
-            L"隐私媒体批处理",
+            L"VideoPrivacy",
             payload->failed > 0 ? MB_ICONWARNING : MB_ICONINFORMATION);
         if (!payload->cancelled && payload->succeeded > 0)
         {
@@ -1319,7 +1319,7 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int showCommand)
     HWND window = CreateWindowExW(
         0,
         WindowClassName,
-        L"隐私媒体批处理",
+        L"VideoPrivacy",
         WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,
         CW_USEDEFAULT,
         CW_USEDEFAULT,
