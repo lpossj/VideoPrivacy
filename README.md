@@ -92,6 +92,33 @@ cmake --build cpp/build --config Release
 
 由于 OpenCV 和 ONNX Runtime 的安装位置可能不同，实际构建前需要根据本地环境修改 `cpp/CMakeLists.txt` 中的依赖路径。
 
+## 构建项目
+
+构建前需要安装：
+
+- Visual Studio C++ 工具链
+- CMake
+- OpenCV
+- ONNX Runtime
+
+请在本机配置以下环境变量：
+
+```text
+OpenCV_DIR
+ONNXRUNTIME_ROOT
+```
+
+然后在项目根目录执行：
+
+```powershell
+cmake -S cpp -B cpp/build `
+  -G "Visual Studio 18 2026" `
+  -A x64
+
+cmake --build cpp/build `
+  --config Release
+```
+
 ## 模型文件
 
 项目使用导出为 ONNX 格式的 YOLO11s 人脸检测模型。
@@ -146,16 +173,11 @@ v0.0.1
 ## 后续计划
 
 - 优化视频人脸检测稳定性
-- 增加人脸跟踪功能
-- 增加更多马赛克模式
-- 增加高斯模糊模式
 - 增加纯色遮挡模式
 - 增加车牌检测与隐私保护
-- 优化 GPU 组件安装流程
 - 增加运行日志
 - 完善异常处理
 - 优化图形界面
-- 增加处理进度和剩余时间显示
 
 ## 免责声明
 
