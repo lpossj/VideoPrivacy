@@ -1,0 +1,58 @@
+﻿# CMake 构建目录
+build/
+**/build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Visual Studio / CMake 生成文件
+.vs/
+*.sln
+*.slnx
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+x64/
+Win32/
+Debug/
+Release/
+RelWithDebInfo/
+MinSizeRel/
+
+# 编译产物
+*.exe
+*.dll
+*.lib
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.tlog
+*.recipe
+*.lastbuildstate
+
+# 安装程序输出
+installer/output/
+
+# 视频及处理结果
+output/
+**/output/
+*.mp4
+*.avi
+*.mkv
+*.mov
+
+# 压缩包和临时文件
+*.zip
+*.7z
+*.rar
+*.tmp
+*.log
+*.bak
+Thumbs.db
+.DS_Store
+
+# 本地配置和密钥
+.env
+.env.*
