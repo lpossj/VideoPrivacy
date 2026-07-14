@@ -1,9 +1,9 @@
-#define MyAppName "视频自动打码"
+#define MyAppName "VideoPrivacy"
 #define MyAppVersion "0.0.1"
 #define MyAppPublisher "lpossj"
 #define MyAppExeName "video_privacy_gui.exe"
 
-#define GpuPackageUrl "https://github.com/lpossj/VideoPrivacy/releases/download/v0.0.1/VideoPrivacy-GPU-Runtime-v0.0.1-CUDA12-cuDNN9-x64.zip"
+#define GpuPackageUrl "https://github.com/lpossj/VideoPrivacy_optionalGPUcomponents/releases/download/v0.0.1/VideoPrivacy-GPU-Runtime-v0.0.1-CUDA12-cuDNN9-x64.zip"
 #define GpuPackageHash "7EFAE8571F4E216E2C1153617247A09CF8F2437D73141DE55354D3E92AFF2083"
 
 [Setup]
@@ -89,17 +89,17 @@ Name: "desktopicon"; \
     Flags: unchecked
 
 [Icons]
-Name: "{group}\Video Privacy"; \
+Name: "{group}\VideoPrivacy"; \
     Filename: "{app}\{#MyAppExeName}"; \
     WorkingDir: "{app}"
 
-Name: "{userdesktop}\Video Privacy"; \
+Name: "{userdesktop}\VideoPrivacy"; \
     Filename: "{app}\{#MyAppExeName}"; \
     WorkingDir: "{app}"; \
     Tasks: desktopicon
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; \
-    Description: "启动 Video Privacy"; \
+    Description: "启动 VideoPrivacy"; \
     WorkingDir: "{app}"; \
     Flags: nowait postinstall skipifsilent
